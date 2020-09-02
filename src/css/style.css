@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  min-width: 375px;
 }
 
 *,
@@ -12,7 +13,6 @@ body {
   letter-spacing: -0.2px;
 
   background-color: hsl(204, 43%, 93%);
-
   font-family: "Karla", sans-serif;
   font-size: 16px;
 }
@@ -30,34 +30,40 @@ body {
   margin-left: auto;
 
   border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0px 5px 30px 0px rgba(0,0,0, 0.1);
+  background-color: #ffffff;
+  color: hsl(218, 22%, 67%);
+  box-shadow: 0px 5px 19px -7px rgba(0, 0, 0, 0.2);
 }
 
 .subscription__header {
   padding-top: 28px;
-  padding-right: 25px;
+  padding-right: 8%;
   padding-bottom: 31px;
-  padding-left: 24px;
+  padding-left: 8%;
 }
 
 .subscription__title {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
-  letter-spacing: -0.2px;
-
-  color:hsl(179, 62%, 43%);
+  color: hsl(179, 62%, 43%);
 
   font-size: 20px;
+  line-height: 24px;
+}
+
+.subscription__subtitle {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 0;
+  margin-bottom: 18px;
 }
 
 .subscription__guarantee {
   margin: 0;
   margin-bottom: 17px;
 
-  letter-spacing: 0.1px;
-
+  font-weight: 700;
   color: hsl(71, 73%, 54%);
 
   font-size: 15px;
@@ -68,34 +74,20 @@ body {
 .subscription__desc {
   margin: 0;
 
-  letter-spacing: -0.2px;
-
-  color: hsl(218, 22%, 67%);
-
   font-size: 14px;
   line-height: 26px;
 }
 
-
-
-.details {
-  padding-top: 25px;
-  padding-right: 24px;
-  padding-bottom: 2px;
-  padding-left: 24px;
+.subscription__details {
+  padding: 24px;
+  padding-left: 8%;
+  padding-right: 8%;
 
   color: #ffffff;
   background-color: hsl(179, 62%, 43%);
 }
 
-.details__title {
-  margin: 0;
-  margin-bottom: 16px;
-
-  font-size: 18px;
-}
-
-.details__price {
+.subscription__price {
   margin: 0;
   margin-bottom: 8px;
 
@@ -103,69 +95,77 @@ body {
   font-weight: bold;
 }
 
-.details__price-label {
+.subscription__price-label {
   vertical-align: middle;
 
   font-size: 16px;
   font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.details__desc {
+.subscription__price-info {
   margin: 0;
   margin-bottom: 30px;
-
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.details__sing-in-btn {
+.subscription__sing-in-btn {
   display: block;
 
-  padding: 15px;
-  padding-bottom: 14px;
-
+  padding-top: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  line-height: 26px;
   text-align: center;
   text-decoration: none;
 
   color: #ffffff;
   border-radius: 5px;
   background-color: hsl(71, 73%, 54%);
-  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
 
   font-weight: 700;
 }
 
-.features {
-  padding-top: 24px;
-  padding-right: 24px;
-  padding-bottom: 24px;
-  padding-left: 24px;
+.subscription__sing-in-btn:hover,
+.subscription__sing-in-btn:focus {
+  background-color: #fff;
+  color: hsl(179, 62%, 43%);
+  box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.1);
+}
 
+.subscription__sing-in-btn:active {
+  background-color: #fff;
+  color: hsl(179, 62%, 43%);
+  box-shadow: inset 0px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.subscription__features {
+  padding: 24px;
+  padding-left: 8%;
+  padding-right: 8%;
   color: #ffffff;
   background-color: hsl(179, 49%, 52%);
 }
 
-.features__title {
+.subscription__features-list {
   margin: 0;
-  margin-bottom: 18px;
-}
+  padding: 0;
+  color: rgba(255, 255, 255, 0.6);
+  list-style: none;
 
-.features__list {
-margin: 0;
-padding: 0;
-
-list-style: none;
-
-letter-spacing: -0.2px;
-
-font-size: 14px;
-line-height: 20px;
-
+  font-size: 14px;
+  line-height: 20px;
 }
 
 @media (min-width: 700px) {
 
   .container {
     padding-top: 163px;
+    padding-bottom: 163px;
   }
+
   .subscription {
     display: flex;
     flex-wrap: wrap;
@@ -176,51 +176,41 @@ line-height: 20px;
   .subscription__header {
     width: 100%;
     padding: 40px;
-    padding-top: 35px;
-    padding-bottom: 42px;
   }
 
   .subscription__title {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 28px;
   }
+
   .subscription__guarantee {
-    margin-bottom: 6px;
+    margin-bottom: 11px;
+    font-size: 18px;
+  }
 
-    letter-spacing: -0.018em;
-
-    font-size: 19px;
+  .subscription__desc {
+    font-size: 16px;
   }
 
   .subscription__details {
     flex-grow: 1;
 
     width: 50%;
-  }
-
-  .details {
     padding: 40px;
-    padding-top: 38px;
   }
 
-  .details__title {
-    margin-bottom: 5px;
-  }
-
-  .details__price {
-    margin-bottom: 0;
+  .subscription__price {
+    margin-bottom: 8px;
   }
 
   .subscription__features {
     flex-grow: 1;
 
     width: 50%;
-  }
-
-  .features {
     padding: 40px;
   }
-
 }
 
 .attribution {
